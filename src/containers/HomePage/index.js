@@ -13,7 +13,7 @@ const User = (props) => {
   
     return (
         <div className="d-flex align-items-start" onClick={() => onClick(user)}>
-            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="rounded-circle mr-1" alt="Vanessa Tucker" width="40" height="40" />
+            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Vanessa Tucker" width="40" height="40" />
             <div class="flex-grow-1 ml-3">
             {user.firstName} {user.lastName}
                 <div className="small">
@@ -29,14 +29,8 @@ const User = (props) => {
 const ChatImageDisplay = () => {
     return (
         <div class="position-relative">
-            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40" />
+            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40" />
         </div>
-    );
-}
-
-const chatUserStatus = () => {
-    return (
-        <div class="text-muted small"><em>Typing...</em></div>
     );
 }
 
@@ -154,8 +148,8 @@ const HomePage = (props) => {
 
 
 
-                    <div class="col-12 col-lg-7 col-xl-9">
-                        <div class="card border-0">
+                    <div class="col-12 col-lg-7 col-xl-9 h-100">
+                        <div class="card border-0 bg-tranparent h-100">
                             <div class="card-header border-0">
                                 <div class="py-2 px-4 border-bottom d-none d-lg-block">
                                     <div class="d-flex align-items-center py-1">
@@ -168,9 +162,6 @@ const HomePage = (props) => {
                                                 chatStarted ? chatUser : ''
                                             }
                                         </strong>
-                                        {
-                                            chatStarted ? chatUserStatus() : null
-                                        }
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +175,6 @@ const HomePage = (props) => {
                                                     <div className={` ${con.user_uid_1 == auth.uid ? 'chat-message-right pb-4' : 'chat-message-left pb-4'} `}>
                                                         <div>
                                                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40" />
-                                                            <div class="text-muted small text-nowrap mt-2">2:33 am</div>
                                                         </div>
                                                         <div class={`flex-shrink-1 bg-light rounded py-2 px-3 ${con.user_uid_1 == auth.uid ? 'mr-3' : 'ml-3'}`}>
                                                             {con.message}
@@ -196,8 +186,6 @@ const HomePage = (props) => {
                                     </div>
                                 </div>
                             </div>
-
-
 
                             <div class="card-footer fixed-bottom">
                                 {
