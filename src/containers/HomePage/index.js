@@ -197,6 +197,8 @@ const HomePage = (props) => {
                                 </div>
                             </div>
 
+
+
                             <div class="card-footer fixed-bottom">
                                 {
                                     chatStarted ?
